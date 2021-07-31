@@ -20,6 +20,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
 <link rel="stylesheet" href="assets/css/styles.css">
+<!-- <link rel="stylesheet" href="assets/style.css"> -->
 
 	<title><?=$title?></title>
 	

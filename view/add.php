@@ -1,7 +1,8 @@
 <?php 
-$title = "Add Post";
 require_once('header.php');
-require_once('../model/announce.php');
+$title = "Add Post";
+
+require_once('../model/product.php');
 ?>
  </nav>
  <div class="container" style="text-align: center;">

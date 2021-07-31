@@ -30,7 +30,6 @@
     function insertProduct($product)
     {
     $conn=getConnection();
-    print_r($product);
     $sql="INSERT INTO `product` (`P_name`, `P_Desc`, `P_Cate`, `P_Price`, `P_image`) 
     VALUES ('{$product['productName']}', '{$product['description']}', '{$product['category']}','{$product['price']}','{$product['photo']}')";
 
