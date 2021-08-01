@@ -1,5 +1,5 @@
 <?php 
-require_once('../model/admin.php');
+require_once('../model/owner.php');
 require_once('../view/header.php');
 
 if(isset($_POST['submit'])){

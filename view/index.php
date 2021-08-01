@@ -6,7 +6,6 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-//print_r($_SESSION['current_user']);
 $user=$_SESSION['current_user'];
 
 ?>

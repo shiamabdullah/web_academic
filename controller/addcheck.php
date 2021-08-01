@@ -35,9 +35,9 @@ if (session_status() == PHP_SESSION_NONE) {
       
       print_r($product);
       if(insertProduct($product)){
-            $_SESSION['stat']="Added Post";
+            $_SESSION['stat']="Added Product";
             $_SESSION['stat_code']="success";
-            header('location: ../view/index.php');
+            header('location: ../view/viewProducts.php');
       }
       else{
         echo 'Error';

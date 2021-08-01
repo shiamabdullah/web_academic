@@ -1,5 +1,5 @@
 <?php 
-$title = "Add Post";
+$title = "Add Product";
 
 require_once('header.php');
 
@@ -12,10 +12,10 @@ require_once('../model/product.php');
 
         <div class="illustration" ></div>
             <div class="mb-3">
-                <h4 class="text-center bg-dark text-white">Add Post</h4>
+                <h4 class="text-center bg-dark text-white">Add Product</h4>
             </div>
             <div class="mb-3" >  <span class="text-dark">Name: </span><input class="form-control" type="text" value="" name="productName"></div>
-            <div class="mb-3"><span class="text-dark">Description:</span><input class="form-control" type="text" value="" name="description"></div>
+            <div class="mb-3"><span class="text-dark">Description:</span><textarea class="form-control" type="text" value="" name="description"></textarea></div>
             <div class="mb-3"><span class="text-dark">Category:</span><input class="form-control" type="text" value="" name="category"></div>
             <div class="mb-3"><span class="text-dark">Price:</span><input class="form-control" type="text" value="" name="price"></div>
            

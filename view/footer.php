@@ -1,7 +1,10 @@
+    
+    <footer class="fixed-bottom">
 
         <center>
         Copyright Property 
         </center>
+    </footer>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/bootstrap/js/sweetalert.min.js"></script>
         <?php 

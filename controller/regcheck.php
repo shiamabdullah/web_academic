@@ -1,5 +1,5 @@
 <?php 
-require_once('../model/admin.php');
+require_once('../model/owner.php');
 require_once('../view/header.php');
 
 if(isset($_POST['submit'])){
@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
         $file_type= $_FILES['file']['type'];
         $file_size= $_FILES['file']['size'];
         $file_tem_loc= $_FILES['file']['tmp_name'];
-        $target_file = '../assets/AdminPhotos/' . basename($username."_".$file_name);
+        $target_file = '../assets/OwnerPhotos/' . basename($username."_".$file_name);
 
 
         if (empty($file_name) or empty($file_type) or empty($file_size) or empty($file_tem_loc)  ){

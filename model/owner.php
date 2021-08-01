@@ -3,7 +3,7 @@
   function getUserbyId($id)
   {
       $conn = getConnection();
-      $sql = "SELECT * FROM `admin` WHERE `username`='{$id}'";
+      $sql = "SELECT * FROM `owner` WHERE `username`='{$id}'";
       $result = mysqli_query($conn, $sql);
       $row = mysqli_fetch_assoc($result);
       return $row;
@@ -12,7 +12,7 @@
   function validateUser($username,$password)
   {     
         $conn=getConnection();
-        $sql = "select * from admin where username='{$username}' and password='{$password}'";
+        $sql = "select * from owner where username='{$username}' and password='{$password}'";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_assoc($result);
         if($row){
@@ -26,7 +26,7 @@
   function insertUser($user)
   {print_r($user);
     $conn=getConnection();
-    $sql="INSERT INTO `admin` (`name`, `username`, `email`, `phone`, `address`, `password`, `gender`, `photo`) VALUES 
+    $sql="INSERT INTO `owner` (`name`, `username`, `email`, `phone`, `address`, `password`, `gender`, `photo`) VALUES 
     ('{$user['name']}','{$user['username']}','{$user['email']}','{$user['phone']}','{$user['address']}','{$user['password']}','{$user['gender']}','{$user['photo']}')";
     
     if(mysqli_query($conn,$sql)){
