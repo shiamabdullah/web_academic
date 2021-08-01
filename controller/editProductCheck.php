@@ -21,6 +21,9 @@ if (session_status() == PHP_SESSION_NONE) {
             header('location: ../view/viewProducts.php');
       }
       else{
+      
+      $_SESSION['stat']="Not Updated Product";
+      $_SESSION['stat_code']="error";
         echo 'Error';
       }
     

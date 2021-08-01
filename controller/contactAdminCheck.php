@@ -1,5 +1,4 @@
 <?php 
-require_once('../view/header.php');
 $user=$_SESSION['current_user'];
 require_once('../model/db.php');
 
@@ -16,15 +15,17 @@ if(isset($_POST['submit'])){
     $sql="INSERT INTO `sms` (`owner_id`, `topic`, `message`) 
     VALUES ('{$owner}', '{$topic}', '{$message}')";
      if(mysqli_query($conn,$sql)){
-         
-        return true;
+      $_SESSION['stat']="Message Sent";
+      $_SESSION['stat_code']="success";
+      header('location: ../view/index.php');
+
       }
       else{
-        return false;
+        $_SESSION['stat']="Not Sent";
+        $_SESSION['stat_code']="error";
       }
     
 }
 
-require_once('../view/footer.php');
 
 ?>

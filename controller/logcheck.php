@@ -21,7 +21,6 @@ if(isset($_POST['submit'])){
            $_SESSION['stat']="Logged in";
             $_SESSION['stat_code']="success";
             
-            //print_r($_SESSION['current_user']);
             header('location: ../view/index.php');
         }
         else
