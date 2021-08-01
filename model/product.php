@@ -44,4 +44,14 @@
   }
 
 
+  function fetchProduct($id)
+  {
+      $conn = getConnection();
+      $sql = "SELECT * FROM `product` WHERE `P_ID`='{$id}'";
+      $result = mysqli_query($conn, $sql);
+      $row = mysqli_fetch_assoc($result);
+      return $row;
+    
+    }
+
   ?>

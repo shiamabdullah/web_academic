@@ -1,5 +1,5 @@
 <?php 
-$title = "Update Post";
+$title = "Update Products";
 require_once('header.php');
 require_once('../model/announce.php');
 $post = getPostbyId($_GET['id']);
