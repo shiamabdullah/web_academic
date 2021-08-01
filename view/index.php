@@ -72,6 +72,8 @@ $user=$_SESSION['current_user'];
                 echo '<div>';
                 echo '<div class="container" style="text-align: center"> <h3 style="color: var(--bs-dark);">Products</h3></div>';
                 echo '<div class="container" style="text-align: left;"> <h4><a href="add.php">Add Product</a></h4></div>';
+                echo '<div class="container" style="text-align: left;"> <h4><a href="viewProducts.php">View Products</a></h4></div>';
+                echo '<div class="container" style="text-align: left;"> <h4><a href="updateProduct.php">Update Products</a></h4></div>';
                 echo '</div>';
                 
                 

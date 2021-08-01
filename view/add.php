@@ -1,6 +1,7 @@
 <?php 
-require_once('header.php');
 $title = "Add Post";
+
+require_once('header.php');
 
 require_once('../model/product.php');
 ?>
