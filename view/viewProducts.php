@@ -4,6 +4,7 @@ $title='View Products';
 require_once('header.php');
 require_once('../model/product.php');
 $conn = getConnection();
+require_once('sessionheader.php');
 
 ?>
 </nav>

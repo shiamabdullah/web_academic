@@ -4,13 +4,14 @@ $title='View Products';
 require_once('header.php');
 require_once('../model/product.php');
 $conn = getConnection();
+require_once('sessionheader.php');
 
 ?>
 </nav>
 <div class="container" style="text-align: center;">
 <div  class="mb-3">
   
-    <div class="bg-dark text-white"><h2>View Products </h2></div>
+    <div class="bg-dark text-white"><h2>Update Products </h2></div>
 
 
 <div class="container" style="text-align: center;">
@@ -41,12 +42,11 @@ $conn = getConnection();
                   <td><?php echo $row['P_Price']; ?></td>
                   <td><img src="<?php echo $row['P_image']; ?>" width="150px" height="150px"></td>
                   <td>
-                <a class=<?php echo"\"btn btn-success\" href=\"../view/editProductAdmin.php?id={$row['P_ID']}\" role=\"button\">Edit"; ?></a>
+                <a class=<?php echo"\"btn btn-success\" href=\"../view/editProduct.php?id={$row['P_ID']}\" role=\"button\">Edit"; ?> </a> <br>
+                <a class=<?php echo"\"btn btn-danger\" href=\"../controller/deleteProduct.php?id={$row['P_ID']}\" role=\"button\">Delete"; ?> </a>
+
                 </td>
-                
-                <td>
-                <a class=<?php echo"\"btn btn-success\" href=\"../view/editProductAdmin.php?id={$row['P_ID']}\" role=\"button\">Edit"; ?></a>
-                </td>
+              
                 </tr>	 
               <?php
               }

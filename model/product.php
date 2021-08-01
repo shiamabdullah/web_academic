@@ -1,31 +1,7 @@
 <?php
   require_once('db.php');
   
-  
-  function getPostbyId($id)
-  {
-      $conn = getConnection();
-      $sql = "SELECT * FROM `announcement` WHERE `id`='{$id}'";
-      $result = mysqli_query($conn, $sql);
-      $row = mysqli_fetch_assoc($result);
-      return $row;
-    
-    }
 
-    function insertPost($post)
-    { 
-      $conn=getConnection();
-      $sql="INSERT INTO `announcement`(`header`, `body`) VALUES ('{$post['header']}', '{$post['body']}')";
-      $result=mysqli_query($conn,$sql);
-      if($result)
-      {   
-        echo 'Added';
-      }
-      else
-      {
-          return false;
-      }
-    }
 
     function insertProduct($product)
     {
@@ -43,6 +19,21 @@
     }
   }
 
+  function updateProduct($product)
+  {
+  $conn=getConnection();
+
+  $sql="UPDATE `product` set P_name='{$product['productName']}',P_Desc='{$product['description']}',P_Cate='{$product['category']}',P_Price='{$product['price']}' where P_ID='{$product['id']}'";
+
+  if(mysqli_query($conn,$sql))
+  {   
+      return true;
+  }
+  else
+  {
+      return false;
+  }
+}
 
   function fetchProduct($id)
   {

@@ -5,6 +5,8 @@ require_once('header.php');
 
 require_once('../model/product.php');
 $product = fetchProduct($_GET['id']);
+require_once('sessionheader.php');
+
 
 ?>
  </nav>
@@ -32,7 +34,7 @@ $product = fetchProduct($_GET['id']);
             
             <div class="mb-1">
                 
-            <button class="btn btn-success d-block w-100" type="submit" name="submit">Edit Product</button></div>
+            <button class="btn btn-success d-block w-100" type="submit" value="<?php echo $_GET['id'];?>" name="submit">Edit Product</button></div>
 
         </form>
  </div>
