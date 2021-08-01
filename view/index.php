@@ -19,31 +19,21 @@ $user=$_SESSION['current_user'];
             if(!isset($_SESSION['flag'])){
               
             echo '<ul class="navbar-nav me-auto"></ul><span class="navbar-text actions"> <a class="login" href="login.php">Log In</a><a class="btn btn-light action-button" role="button" href="signup.php">Sign Up</a></span>';
-            echo '';
             echo '</div>';
             echo '</div>';
             echo '</nav>';  
-            
-            
-            
+            require_once('login.php');
 
+            
+        
            
             }       
 
             
 
             else 
-            {
-                echo '<ul class="navbar-nav me-auto">';
-                
-                echo'</ul><span class="navbar-text actions"> <a class="login">' ;
-
-                echo $user['name'];
-                echo' 🟢</a><a class="btn btn-light action-button" role="button" href="../controller/signout.php">Sign Out</a></span>';
-                echo '</div>';
-                echo '</div>';
+            {   require_once('sessionheader.php');
                 echo '</nav>';  
-
                 echo '<div>';
                 echo '<div class="container" style="text-align: left;"> <h7><a href="add.php" class="link-dark">Add Product</a></h7></div>';
                 echo '<div class="container" style="text-align: left;"> <h7><a href="viewProducts.php" class="link-dark">View Products</a></h7></div>';
